@@ -37,7 +37,7 @@ Transform user authentication from a chore into an exciting digital asset claim 
 
 ## Technical Implementation
 
-- Smart Contracts: Ethereum (ERC-721 for NFTs, ERC-5169 for Token Bound Accounts)
+- Smart Contracts: Ethereum (ERC-721 for NFTs, ERC-5169 for tapps)
 - Frontend: React with Web3 integration
 - Backend: Node.js with Express
 - Blockchain Interaction: Web3.js or Ethers.js
