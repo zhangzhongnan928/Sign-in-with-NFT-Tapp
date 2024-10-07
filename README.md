@@ -1,6 +1,6 @@
 # Sign in with NFT Tapp
 
-Transform user authentication from a chore into an exciting NFT claim experience.
+Transform user authentication from a chore into an exciting digital asset claim experience.
 
 ## Overview
 
