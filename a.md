@@ -1,4 +1,3 @@
-
 # Sign in with NFT - The Future of Decentralized Authentication
 
 ## Introduction
@@ -36,7 +35,7 @@ By adopting "Sign in with NFT," we aim to drive mass adoption of **Ethereum** an
 ### Supported Chains
 Currently, "Sign in with NFT" supports:
 - Ethereum
-- Base
+- Polygon
 
 More EVM-compatible chains like Optimism, Arbitrum, and Base will be added based on community demand.
 
@@ -55,20 +54,22 @@ First, clone this repository and install the necessary dependencies.
 git clone https://github.com/your-repo/sign-in-with-nft.git
 cd sign-in-with-nft
 npm install
+```
 
-Next, you can add the Sign in with NFT SDK to your website.
+Next, you can add the **Sign in with NFT SDK** to your website.
 
-SDK Integration
+## SDK Integration
 
-To integrate “Sign in with NFT” on your website, follow these steps:
+To integrate "Sign in with NFT" on your website, follow these steps:
 
-	1.	Install the SDK in your project:
+1. Install the SDK in your project:
+   ```bash
+   npm install sign-in-with-nft-sdk
+   ```
 
-npm install sign-in-with-nft-sdk
+2. Add the following code to your login page:
 
-
-	2.	Add the following code to your login page:
-
+```javascript
 import { connectWallet, signMessage, verifyNFT } from 'sign-in-with-nft-sdk';
 
 // Triggered when the user clicks "Sign in with NFT"
@@ -91,26 +92,27 @@ async function signInWithNFT() {
     alert("Invalid NFT or login attempt failed.");
   }
 }
+```
 
-	3.	Configure your backend to handle challenge message generation and NFT verification. (See the NFT Verification Backend section for more details.)
+3. Configure your backend to handle challenge message generation and NFT verification. (See the [NFT Verification Backend](#nft-verification-backend) section for more details.)
 
-Example Code
+### Example Code
+Check the `/examples` directory for fully working integration examples.
 
-Check the /examples directory for fully working integration examples.
+## NFT Verification Backend
 
-NFT Verification Backend
+To verify NFT ownership, you will need a backend that handles the challenge generation and NFT validation. Hereâs a basic implementation:
 
-To verify NFT ownership, you will need a backend that handles the challenge generation and NFT validation. Here’s a basic implementation:
-
-	1.	Generate a Challenge: This API endpoint generates a challenge for the user to sign.
-
+1. **Generate a Challenge**: This API endpoint generates a challenge for the user to sign.
+```javascript
 app.get('/api/generate-challenge', (req, res) => {
   const challenge = `Sign this message to authenticate: ${Date.now()}`;
   res.json({ challenge });
 });
+```
 
-	2.	Verify Signature and NFT: This API endpoint verifies the signed message and checks NFT ownership.
-
+2. **Verify Signature and NFT**: This API endpoint verifies the signed message and checks NFT ownership.
+```javascript
 app.post('/api/verify-nft', async (req, res) => {
   const { walletAddress, signature } = req.body;
 
@@ -130,41 +132,30 @@ app.post('/api/verify-nft', async (req, res) => {
     return res.status(401).json({ message: 'NFT not owned' });
   }
 });
+```
 
 More advanced backend setups (e.g., multi-chain, custom logic for NFT attributes) can be added as necessary.
 
-Contributing
+## Contributing
 
-We welcome contributions from the community! Here’s how you can get involved:
+We welcome contributions from the community! Hereâs how you can get involved:
+1. Fork the repo and create your own branch.
+2. Add your changes (new features, bug fixes, etc.).
+3. Submit a pull request with a description of what youâve done.
 
-	1.	Fork the repo and create your own branch.
-	2.	Add your changes (new features, bug fixes, etc.).
-	3.	Submit a pull request with a description of what you’ve done.
+### Roadmap
+- Add support for more wallets (e.g., Coinbase Wallet).
+- Expand chain compatibility (Base, Optimism, Arbitrum).
+- Add TokenScript-based customizable login flows.
+- Build a user interface for easier NFT verification management.
 
-Roadmap
+### Issues
+If you encounter any issues or have feature requests, please submit them in the [Issues](https://github.com/your-repo/sign-in-with-nft/issues) section of this repository.
 
-	•	Add support for more wallets (e.g., Coinbase Wallet).
-	•	Expand chain compatibility (Base, Optimism, Arbitrum).
-	•	Add TokenScript-based customizable login flows.
-	•	Build a user interface for easier NFT verification management.
+## License
 
-Issues
+This project is open source and licensed under the [MIT License](./LICENSE).
 
-If you encounter any issues or have feature requests, please submit them in the Issues section of this repository.
+---
 
-License
-
-This project is open source and licensed under the MIT License.
-
-Made with 💙 by the Ethereum community. Let’s build the decentralized web together!
-
-### Key Sections Breakdown:
-- **Introduction**: Gives an overview of what the project is about and why it's important for Web3 adoption.
-- **Features**: Lists the core features of the project.
-- **Getting Started**: Shows developers how to set up the project locally and integrate it.
-- **SDK Integration**: Provides an example of how to use the JavaScript SDK for integrating the NFT sign-in functionality.
-- **NFT Verification Backend**: Covers backend verification for NFTs and signatures.
-- **Contributing**: Encourages community contributions and outlines how people can help.
-- **License**: Clearly states that the project is open source with an MIT license.
-
-
+Made with ð by the Ethereum community. Let's build the decentralized web together!
