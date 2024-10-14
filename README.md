@@ -1,5 +1,5 @@
 
-# Sign in with NFT - The Future of Decentralized Authentication
+# Sign in with NFT: Account NFT Tapps - The Future of Decentralized Authentication
 
 ## Introduction
 
