@@ -49,10 +49,16 @@ By adopting "Sign in with NFT," we aim to drive mass adoption of **Ethereum** an
 ## How It Works
 
 ### User Flow
-1. **Connect Wallet**: Users click "Sign in with NFT" on a website and connect their wallet (MetaMask, WalletConnect, etc.).
-2. **Challenge Message**: The website backend generates a challenge message that is sent to the user for signing.
-3. **Verify NFT Ownership**: After the user signs the message, the backend verifies that the user holds the required NFT and checks its validity (e.g., attributes, collection).
-4. **Authentication**: Once verified, the user is authenticated and logged in to the website.
+
+1. **Connect or Create Wallet**: Users click "Sign in with NFT" on a website. If they have a wallet (e.g., MetaMask or Coinbase Wallet), they can connect it directly. If they don’t have a wallet, they can create one on the spot using **Coinbase Smart Wallet** or **Joy.ID**.
+   
+2. **Claim or Mint NFT**: If users don’t own the required NFT, they are prompted to claim or mint the NFT during the sign-up process, making the onboarding experience frictionless.
+
+3. **Challenge Message**: The website backend generates a challenge message that is sent to the user for signing.
+
+4. **Verify NFT Ownership**: After the user signs the message, the backend verifies that the user holds the required NFT and checks its validity (e.g., attributes, collection).
+
+5. **Authentication**: Once verified, the user is authenticated and logged in to the website.
 
 ### Supported Chains
 Currently, "Sign in with NFT" supports:
