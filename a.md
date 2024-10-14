@@ -36,7 +36,7 @@ By adopting "Sign in with NFT," we aim to drive mass adoption of **Ethereum** an
 ### Supported Chains
 Currently, "Sign in with NFT" supports:
 - Ethereum
-- Polygon
+- Base
 
 More EVM-compatible chains like Optimism, Arbitrum, and Base will be added based on community demand.
 
