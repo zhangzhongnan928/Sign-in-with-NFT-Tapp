@@ -20,7 +20,7 @@ By adopting "Sign in with NFT," we aim to drive mass adoption of **Ethereum** an
 ## Benefits
 
 ### For Users
-- **Ownership**: Users own their digital identity in the form of NFTs, providing them with more control over their data and privacy.
+- **Ownership**: Users own their digital identity(asset) in the form of NFTs, providing them with more control over their data and privacy.
 - **Seamless Experience**: Sign in across different websites and platforms with a single NFT, without needing to remember multiple usernames and passwords.
 - **Privacy-first**: Each platform issues its own NFT, ensuring user privacy is maintained across different platforms.
 - **Exclusive Perks**: Users may unlock exclusive content, features, or benefits by holding specific NFTs tied to a platform or ecosystem.
@@ -35,7 +35,7 @@ By adopting "Sign in with NFT," we aim to drive mass adoption of **Ethereum** an
 
 ### For Ethereum
 - **Mass Adoption**: This project drives more users and developers to Ethereum by making NFTs a central part of decentralized identity and authentication.
-- **Increased Usage**: As more websites adopt "Sign in with NFT," Ethereum becomes the backbone of digital identity management, increasing network activity and transaction volume.
+- **Increased Usage**: As more websites adopt "Sign in with NFT," Ethereum becomes the backbone of digital identity(asset) management, increasing network activity and transaction volume.
 - **Interoperability**: The project showcases Ethereumâs capability to act as a bridge across multiple dApps and ecosystems, leveraging its strength as an open, decentralized platform.
 
 ## Table of Contents
