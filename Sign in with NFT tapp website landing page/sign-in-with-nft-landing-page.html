@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in with NFT - Revolutionize User Authentication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --color-dark-blue: #0B0D17;
+            --color-bright-purple: #62688F;
+            --color-light-purple: #A68EF3;
+            --color-light-blue: #5C79FF;
+            --color-white: #FFFFFF;
+            --color-light-grey: #F7F8F9;
+            --color-soft-grey: #E2E2E2;
+            --color-shadow: rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--color-dark-blue);
+            background-color: var(--color-white);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            color: var(--color-dark-blue);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        h3 {
+            font-size: 24px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: var(--color-light-blue);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-bright-purple);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--color-bright-purple);
+            color: var(--color-white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--color-light-purple);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-light-purple);
+            color: var(--color-dark-blue);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-bright-purple);
+            color: var(--color-white);
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-light {
+            background-color: var(--color-white);
+        }
+
+        .section-dark {
+            background-color: var(--color-light-grey);
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .flex-item {
+            flex: 1;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--color-light-purple), var(--color-light-blue));
+            color: var(--color-white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--color-white);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            text-align: center;
+        }
+
+        .benefit-item {
+            padding: 20px;
+            background-color: var(--color-white);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px var(--color-shadow);
+            transition: transform 0.3s;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-item i {
+            font-size: 48px;
+            color: var(--color-light-blue);
+            margin-bottom: 20px;
+        }
+
+        .benefit-item ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: left;
+        }
+
+        .benefit-item li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .benefit-item li strong {
+            color: var(--color-light-blue);
+        }
+
+        /* How It Works Section */
+        .how-it-works ol {
+            list-style-type: none;
+            counter-reset: steps;
+        }
+
+        .how-it-works li {
+            counter-increment: steps;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .how-it-works li::before {
+            content: counter(steps);
+            margin-right: 20px;
+            background-color: var(--color-bright-purple);
+            color: var(--color-white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* Supported Chains Section */
+        .chain-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .chain-logos img {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.3s;
+        }
+
+        .chain-logos img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-dark-blue);
+            color: var(--color-white);
+            padding: 40px 0;
+        }
+
+        footer a {
+            color: var(--color-light-purple);
+        }
+
+        footer a:hover {
+            color: var(--color-light-blue);
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Revolutionize User Authentication with Sign in with NFT</h1>
+            <p>A decentralized, open-source solution for seamless user onboarding with NFTs.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn">Get Started</a>
+                <a href="#" class="btn btn-secondary">Try the Demo</a>
+                <a href="#" class="btn btn-secondary">Join the Community</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-light">
+        <div class="container flex-container">
+            <div class="flex-item">
+                <h2>What is Sign in with NFT?</h2>
+                <p>Sign in with NFT is an open-source solution that replaces traditional login systems with decentralized authentication using NFTs. It allows users to fully control their identity and login credentials, making Web3 more accessible to everyone.</p>
+            </div>
+            <div class="flex-item">
+                <img src="/api/placeholder/500/300" alt="Sign in with NFT Concept" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark benefits">
+        <div class="container">
+            <h2 class="text-center">Why Use Sign in with NFT?</h2>
+            <div class="flex-container">
+                <div class="flex-item benefit-item">
+                    <i class="fas fa-user"></i>
+                    <h3>For Users</h3>
+                    <ul>
+                        <li><strong>Ownership:</strong> Control your digital identity and data privacy with NFT-based credentials.</li>
+                        <li><strong>Seamless Experience:</strong> Use a single NFT to sign in across multiple platforms.</li>
+                        <li><strong>Privacy-first:</strong> Each platform issues its own NFT, maintaining privacy across different services.</li>
+                        <li><strong>Exclusive Perks:</strong> Unlock special content and features with platform-specific NFTs.</li>
+                    </ul>
+                </div>
+                <div class="flex-item benefit-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>For Websites</h3>
+                    <ul>
+                        <li><strong>Onboard Crypto Users:</strong> Attract tech-savvy, high-value users with NFT-based login.</li>
+                        <li><strong>No Centralized Account Management:</strong> Reduce liability by eliminating stored user credentials.</li>
+                        <li><strong>Easy Integration:</strong> Implement NFT authentication easily with our SDK.</li>
+                        <li><strong>Closer to Payments:</strong> Connected wallets enable seamless transaction capabilities.</li>
+                        <li><strong>Increased Engagement:</strong> Offer unique, NFT-based rewards to boost user participation.</li>
+                        <li><strong>Viral Marketing:</strong> Users showcasing NFTs drive organic growth and visibility.</li>
+                    </ul>
+                </div>
+                <div class="flex-item benefit-item">
+                    <i class="fab fa-ethereum"></i>
+                    <h3>For Ethereum</h3>
+                    <ul>
+                        <li><strong>Mass Adoption:</strong> Drive user and developer growth with NFT-based identity solutions.</li>
+                        <li><strong>Increased Usage:</strong> Boost network activity as more sites adopt NFT authentication.</li>
+                        <li><strong>Interoperability:</strong> Showcase Ethereum's strength in connecting multiple dApps and ecosystems.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light how-it-works">
+        <div class="container flex-container">
+            <div class="flex-item">
+                <h2>How It Works</h2>
+                <ol>
+                    <li>Connect Wallet (MetaMask, WalletConnect)</li>
+                    <li>Sign a Challenge generated by the website.</li>
+                    <li>Verify NFT ownership on the blockchain.</li>
+                    <li>User is logged in.</li>
+                </ol>
+            </div>
+            <div class="flex-item">
+                <img src="/api/placeholder/500/300" alt="How Sign in with NFT Works" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container text-center">
+            <h2>Supported Chains</h2>
+            <p>Sign in with NFT currently supports Ethereum and Base. More EVM-compatible chains like Optimism, Arbitrum, and Polygon will be added based on community demand.</p>
+            <div class="chain-logos">
+                <img src="/api/placeholder/80/80" alt="Ethereum Logo" />
+                <img src="/api/placeholder/80/80" alt="Base Logo" />
+                <img src="/api/placeholder/80/80" alt="Optimism Logo" />
+                <img src="/api/placeholder/80/80" alt="Arbitrum Logo" />
+                <img src="/api/placeholder/80/80" alt="Polygon Logo" />
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light">
+        <div class="container flex-container">
+            <div class="flex-item">
+                <h2>Experience the Power of NFT-based Login</h2>
+                <p>Test how easy and fast it is to authenticate using NFTs by connecting your wallet.</p>
+            </div>
+            <div class="flex-item">
+                <a href="#" class="btn">Try the Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container flex-container">
+            <div class="flex-item">
+                <h2>Open Source and Developer Friendly</h2>
+                <p>Contribute to the Sign in with NFT project on GitHub or explore the developer documentation to get started. Help build the future of decentralized identity.</p>
+            </div>
+            <div class="flex-item">
+                <a href="#" class="btn">View on GitHub</a>
+                <a href="#" class="btn btn-secondary">Developer Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light text-center">
+        <div class="container">
+            <h2>Join the Conversation</h2>
+            <p>Get involved in the community by joining our Discord, Telegram, or following us on Twitter.</p>
+            <div class="social-links">
+                <a href="#" class="btn btn-secondary">Discord</a>
+                <a href="#" class="btn btn-secondary">Telegram</a>
+                <a href="#" class="btn btn-secondary">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">GitHub</a>
+                <a href="#">Community</a>
+                <a href="#">Documentation</a>
+            </nav>
+            <p>This project is licensed under the MIT License.</p>
+        </div>
+    </footer>
+</body>
+</html>
