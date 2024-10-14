@@ -11,6 +11,7 @@ By adopting "Sign in with NFT," we aim to drive mass adoption of **Ethereum** an
 
 - **NFT-based Authentication**: Websites can implement an easy and secure way for users to log in using their NFTs as credentials.
 - **Universal Integration SDK**: A simple JavaScript SDK for any website to quickly add the "Sign in with NFT" functionality.
+- **NFT Claiming for Sign-Up**: If users don’t have the required NFT, they can mint or claim the NFT directly during the sign-up process, making the onboarding experience seamless.
 - **ERC-5169/ERC-7738 Integration**: Supports loading TokenScript for NFTs to act as tapps (portable mini-applications).
 - **Multi-chain Support**: Initially supports Ethereum and Polygon, with plans to expand to other EVM-compatible chains.
 - **Customizable Login Logic**: Websites can set login conditions based on specific NFT attributes or collections.
